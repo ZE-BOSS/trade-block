@@ -1,6 +1,14 @@
 import Card from '@material-tailwind/react/Card';
+import Dropdown from "@material-tailwind/react/Dropdown";
+import DropdownItem from "@material-tailwind/react/DropdownItem";
+import DropdownLink from "@material-tailwind/react/DropdownLink";
 import CardHeader from '@material-tailwind/react/CardHeader';
+import Paragraph from "@material-tailwind/react/Paragraph";
+import InputIcon from "@material-tailwind/react/InputIcon";
 import CardBody from '@material-tailwind/react/CardBody';
+import Pagination from "@material-tailwind/react/Pagination";
+import PaginationItem from "@material-tailwind/react/PaginationItem";
+import Icon from "@material-tailwind/react/Icon";
 import Image from '@material-tailwind/react/Image';
 import Progress from '@material-tailwind/react/Progress';
 import Team1 from '/assets/img/team-1-800x800.jpg';
@@ -11,6 +19,44 @@ import Team4 from '/assets/img/team-4-470x470.png';
 export default function CardTable() {
     return (
         <Card>
+            <div className="grid grid-cols-2">
+                <Dropdown
+                    color="lightBlue"
+                    placement="bottom-start"
+                    buttonText="Transfer"
+                    buttonType="filled"
+                    size="regular"
+                    rounded={false}
+                    block={false}
+                    ripple="dark"
+                >
+                    <DropdownLink
+                        href="/main_controller_panel/transferSingle"
+                        color="lightBlue"
+                        ripple="light"
+                        onClick={(e) => e.preventDefault()}
+                    >
+                        Single
+                    </DropdownLink>
+                    <DropdownLink
+                        href="/main_controller_panel/transferMultiple"
+                        color="lightBlue"
+                        ripple="light"
+                        onClick={(e) => e.preventDefault()}
+                    >
+                        Multiple
+                    </DropdownLink>
+                </Dropdown>
+                <InputIcon
+                    type="text"
+                    color="lightBlue"
+                    size="regular"
+                    outline={false}
+                    placeholder="Search"
+                    iconFamily="material-icons"
+                    iconName="person"
+                />
+            </div><br/><br/><br/>
             <CardHeader color="purple" contentPosition="left">
                 <h2 className="text-white text-2xl">Card Table</h2>
             </CardHeader>
@@ -229,6 +275,59 @@ export default function CardTable() {
                     </table>
                 </div>
             </CardBody>
+            <div className="grid grid-cols-3">
+                <Dropdown
+                    color="lightBlue"
+                    placement="bottom-start"
+                    buttonText="25"
+                    buttonType="outline"
+                    size="regular"
+                    rounded={false}
+                    block={false}
+                    ripple="dark"
+                >
+                    <DropdownLink
+                        href="#25"
+                        color="lightBlue"
+                        ripple="light"
+                        onClick={(e) => e.preventDefault()}
+                    >
+                        25
+                    </DropdownLink>
+                    <DropdownLink
+                        href="#50"
+                        color="lightBlue"
+                        ripple="light"
+                        onClick={(e) => e.preventDefault()}
+                    >
+                        50
+                    </DropdownLink>
+                    <DropdownLink
+                        href="#100"
+                        color="lightBlue"
+                        ripple="light"
+                        onClick={(e) => e.preventDefault()}
+                    >
+                        100
+                    </DropdownLink>
+                </Dropdown>
+                <Paragraph color="lightBlue">
+                   1 to 25 of 154
+                </Paragraph>
+                <Pagination>
+                    <PaginationItem href="#last" ripple="dark">
+                        <Icon name="keyboard_arrow_left" />
+                    </PaginationItem>
+                    <PaginationItem color="lightBlue" href="#1" ripple="light">1</PaginationItem>
+                    <PaginationItem href="#2" ripple="dark">2</PaginationItem>
+                    <PaginationItem href="#3" ripple="dark">3</PaginationItem>
+                    <PaginationItem href="#4" ripple="dark">4</PaginationItem>
+                    <PaginationItem href="#5" ripple="dark">5</PaginationItem>
+                    <PaginationItem href="#last" ripple="dark">
+                        <Icon name="keyboard_arrow_right" />
+                    </PaginationItem>
+                </Pagination>
+            </div>
         </Card>
     );
 }

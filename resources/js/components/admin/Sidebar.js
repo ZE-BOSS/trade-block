@@ -17,11 +17,11 @@ export default function Sidebar() {
             >
                 <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
                     <a
-                        href="https://material-tailwind.com?ref=mtd"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-2 text-center w-full inline-block"
+                        href="main_controller_panel"
+                        className="flex flex-row mt-2 text-center w-full items-center"
                     >
+                        <Icon name="price_change" color="blue" size="5xl" />
+                        <i className="p-2"></i>
                         <H6 color="gray">Block Trade</H6>
                     </a>
                     <div className="flex flex-col">
@@ -41,76 +41,68 @@ export default function Sidebar() {
                             </li>
                             <li className="rounded-lg mb-2">
                                 <NavLink
-                                    to="/settings"
+                                    to="/main_controller_panel/transfers"
                                     className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
                                     activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
                                 >
-                                    <Icon name="settings" size="2xl" />
-                                    Settings
+                                    <Icon name="local_atm" size="2xl" />
+                                    Transfer
                                 </NavLink>
                             </li>
                             <li className="rounded-lg mb-2 ">
                                 <NavLink
-                                    to="/tables"
+                                    to="/main_controller_panel/users"
                                     className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
                                     activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
                                 >
-                                    <Icon name="toc" size="2xl" />
-                                    Tables
+                                    <Icon name="manage_accounts" size="2xl" />
+                                    User Management
                                 </NavLink>
                             </li>
                             <li className="rounded-lg mb-2 text-gray-700">
                                 <NavLink
-                                    to="/maps"
+                                    to="/main_controller_panel/configuration"
                                     className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
                                     activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
                                 >
-                                    <Icon name="map" size="2xl" />
-                                    Maps
+                                    <Icon name="build" size="2xl" />
+                                    System Configuration
                                 </NavLink>
                             </li>
                             <li className="px-4 rounded-lg mb-2 text-gray-700">
                                 <a
-                                    href="https://demos.creative-tim.com/material-tailwind-kit-react/#/login"
-                                    target="_blank"
-                                    rel="noreferrer"
+                                    href="/main_controller_panel/investment"
                                     className="flex items-center gap-4 text-sm font-light py-3"
                                 >
-                                    <Icon name="fingerprint" size="2xl" />
-                                    Login
+                                    <Icon name="account_balance" size="2xl" />
+                                    Investment
                                 </a>
                             </li>
                             <li className="px-4 rounded-lg mb-2 text-gray-700">
                                 <a
-                                    href="https://demos.creative-tim.com/material-tailwind-kit-react/#/register"
-                                    target="_blank"
-                                    rel="noreferrer"
+                                    href="/main_controller_panel/deposit"
                                     className="flex items-center gap-4 text-sm font-light py-3"
                                 >
-                                    <Icon name="list_alt" size="2xl" />
-                                    Register
+                                    <Icon name="account_balance_wallet" size="2xl" />
+                                    Deposit System
                                 </a>
                             </li>
                             <li className="px-4 rounded-lg mb-2 text-gray-700">
                                 <a
-                                    href="https://demos.creative-tim.com/material-tailwind-kit-react/#/landing"
-                                    target="_blank"
-                                    rel="noreferrer"
+                                    href="/main_controller_panel/withdrawal"
                                     className="flex items-center gap-4 text-sm font-light py-3"
                                 >
-                                    <Icon name="web" size="2xl" />
-                                    Landing Page
+                                    <Icon name="credit_card" size="2xl" />
+                                    Withdrawal System
                                 </a>
                             </li>
                             <li className="px-4 rounded-lg mb-2 text-gray-700">
                                 <a
-                                    href="https://demos.creative-tim.com/material-tailwind-kit-react/#/profile"
-                                    target="_blank"
-                                    rel="noreferrer"
+                                    href="/main_controller_panel/settings"
                                     className="flex items-center gap-4 text-sm font-light py-3"
                                 >
-                                    <Icon name="account_circle" size="2xl" />
-                                    Profile Page
+                                    <Icon name="settings" size="2xl" />
+                                    Web Settings
                                 </a>
                             </li>
                         </ul>
@@ -118,23 +110,11 @@ export default function Sidebar() {
                         <ul className="flex-col min-w-full flex list-none absolute bottom-0">
                             <li className="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 px-4 rounded-lg text-white mb-2">
                                 <a
-                                    href="https://material-tailwind.com/documentation/quick-start"
-                                    target="_blank"
-                                    rel="noreferrer"
+                                    href="#"
                                     className="flex items-center gap-4 text-sm font-light py-3"
                                 >
-                                    <Icon name="description" size="2xl" />
-                                    Documentation
-                                </a>
-                            </li>
-                            <li className="bg-gradient-to-tr from-purple-500 to-purple-700 px-4 rounded-lg text-white">
-                                <a
-                                    href="https://www.creative-tim.com/product/material-tailwind-dashboard-react"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="flex items-center justify-center gap-4 text-sm font-light py-3"
-                                >
-                                    Free Download
+                                    <Icon name="lock" size="2xl" />
+                                    Signout
                                 </a>
                             </li>
                         </ul>

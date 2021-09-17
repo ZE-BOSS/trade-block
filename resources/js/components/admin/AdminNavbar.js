@@ -8,7 +8,7 @@ import DropdownItem from '@material-tailwind/react/DropdownItem';
 import ProfilePicture from '/assets/img/team-1-800x800.jpg';
 
 export default function AdminNavbar({ showSidebar, setShowSidebar }) {
-    const location = useLocation().pathname;
+    const location = useLocation().pathname.slice(23);
 
     return (
         <nav className="bg-light-blue-500 md:ml-64 py-6 px-3 mt-0">
@@ -69,13 +69,31 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
                                 }}
                             >
                                 <DropdownItem color="lightBlue">
-                                    Action
+                                    <a
+                                        href="/main_controller_panel/profile"
+                                        className="flex items-center gap-2 text-sm font-light py-0"
+                                    >
+                                        <Icon name="account_circle" size="xl" />
+                                        Account Information
+                                    </a>
                                 </DropdownItem>
                                 <DropdownItem color="lightBlue">
-                                    Another Action
+                                    <a
+                                        href="/main_controller_panel/settings"
+                                        className="flex items-center gap-2 text-sm font-light py-0"
+                                    >
+                                        <Icon name="settings" size="xl" />
+                                        Web Settings
+                                    </a>
                                 </DropdownItem>
                                 <DropdownItem color="lightBlue">
-                                    Something Else
+                                    <a
+                                        href="#"
+                                        className="flex items-center gap-2 text-sm font-light py-0"
+                                    >
+                                        <Icon name="lock" size="xl" />
+                                        Signout
+                                    </a>
                                 </DropdownItem>
                             </Dropdown>
                         </div>
